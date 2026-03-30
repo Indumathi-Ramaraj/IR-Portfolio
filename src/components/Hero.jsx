@@ -8,6 +8,7 @@ const TYPING_STRINGS = [
   'FastAPI Engineer',
   'UI/UX Enthusiast',
   'Technical Trainer',
+  'Problem Solver',
 ];
 
 const TECH_TAGS = [
