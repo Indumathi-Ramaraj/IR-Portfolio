@@ -53,7 +53,8 @@ export default function Contact() {
             Let's <span className="gradient-text">Work Together</span>
           </h2>
           <p className="section-subtitle">
-            Ready to collaborate? Drop me a message and I'll get back to you within 24 hours.
+            Ready to collaborate? Drop me a message and I'll get back to you
+            within 24 hours.
           </p>
         </div>
 
@@ -62,11 +63,14 @@ export default function Contact() {
           <div className="glass-card contact__form-card">
             <h3 className="contact__form-title">Send a Message</h3>
 
-            {state === 'success' ? (
+            {state === "success" ? (
               <div className="contact__success">
                 <CheckCircle size={52} />
                 <h4>Message Sent! 🎉</h4>
-                <p>Your message has been delivered to my inbox and I've been notified. I'll get back to you within 24 hours!</p>
+                <p>
+                  Your message has been delivered to my inbox and I've been
+                  notified. I'll get back to you within 24 hours!
+                </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="contact__form">
@@ -81,7 +85,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="Your full name"
                       required
-                      disabled={state === 'loading'}
+                      disabled={state === "loading"}
                     />
                   </div>
                   <div className="contact__field">
@@ -94,7 +98,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="your@email.com"
                       required
-                      disabled={state === 'loading'}
+                      disabled={state === "loading"}
                     />
                   </div>
                 </div>
@@ -122,12 +126,12 @@ export default function Contact() {
                     placeholder="Tell me about your project or opportunity..."
                     rows={6}
                     required
-                    disabled={state === 'loading'}
+                    disabled={state === "loading"}
                   />
                 </div>
 
                 {/* Error message */}
-                {state === 'error' && (
+                {state === "error" && (
                   <div className="contact__error">
                     <AlertCircle size={16} />
                     {errorMsg}
@@ -138,12 +142,17 @@ export default function Contact() {
                   type="submit"
                   id="contact-submit-btn"
                   className="btn btn-primary contact__submit"
-                  disabled={state === 'loading'}
+                  disabled={state === "loading"}
                 >
-                  {state === 'loading' ? (
-                    <><Loader size={16} className="contact__spinner" /> Sending...</>
+                  {state === "loading" ? (
+                    <>
+                      <Loader size={16} className="contact__spinner" />{" "}
+                      Sending...
+                    </>
                   ) : (
-                    <><Send size={16} /> Send Message</>
+                    <>
+                      <Send size={16} /> Send Message
+                    </>
                   )}
                 </button>
               </form>
@@ -155,7 +164,10 @@ export default function Contact() {
             <div className="glass-card contact__info-card">
               <h3 className="contact__info-title">Contact Details</h3>
               <div className="contact__details">
-                <a href={`mailto:${contact.email}`} className="contact__detail-item">
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="contact__detail-item"
+                >
                   <div className="contact__detail-icon">
                     <Mail size={18} />
                   </div>
@@ -164,7 +176,7 @@ export default function Contact() {
                     <div className="contact__detail-value">{contact.email}</div>
                   </div>
                 </a>
-                <a href={`tel:${contact.phone}`} className="contact__detail-item">
+                <div className="contact__detail-item">
                   <div className="contact__detail-icon">
                     <Phone size={18} />
                   </div>
@@ -172,14 +184,16 @@ export default function Contact() {
                     <div className="contact__detail-label">Phone</div>
                     <div className="contact__detail-value">{contact.phone}</div>
                   </div>
-                </a>
+                </div>
                 <div className="contact__detail-item">
                   <div className="contact__detail-icon">
                     <MapPin size={18} />
                   </div>
                   <div>
                     <div className="contact__detail-label">Location</div>
-                    <div className="contact__detail-value">{contact.location}</div>
+                    <div className="contact__detail-value">
+                      {contact.location}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -188,10 +202,12 @@ export default function Contact() {
             <div className="glass-card contact__availability">
               <div className="contact__avail-dot" />
               <div>
-                <div className="contact__avail-title">Open to Opportunities</div>
+                <div className="contact__avail-title">
+                  Open to Opportunities
+                </div>
                 <div className="contact__avail-desc">
-                  Looking for full-time roles, freelance projects, and consulting engagements.
-                  Remote &amp; hybrid preferred.
+                  Looking for full-time roles, freelance projects, and
+                  consulting engagements. Remote &amp; hybrid preferred.
                 </div>
               </div>
             </div>

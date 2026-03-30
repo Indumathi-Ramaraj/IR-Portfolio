@@ -126,13 +126,12 @@
 .contact__info-title {
   font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 9px;
 }
 
 .contact__details {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
 .contact__detail-item {
